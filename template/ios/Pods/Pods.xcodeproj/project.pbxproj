@@ -2513,6 +2513,7 @@
 		46EB2E000155B0 /* RNRandomBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00009650 /* RNRandomBytes.m */; };
 		46EB2E000155C0 /* RNRandomBytes.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00009640 /* RNRandomBytes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		46EB2E00015620 /* react-native-randombytes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00015610 /* react-native-randombytes-dummy.m */; };
+		46EB2E000156B0 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00009680 /* GCDAsyncUdpSocket.m */; };
 		46EB2E000156C0 /* UdpSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000096A0 /* UdpSocketClient.m */; };
 		46EB2E000156D0 /* UdpSockets.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000096C0 /* UdpSockets.m */; };
 		46EB2E000156E0 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00009670 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -15725,6 +15726,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EB2E000156B0 /* GCDAsyncUdpSocket.m in Sources */,
 				46EB2E00015760 /* react-native-udp-dummy.m in Sources */,
 				46EB2E000156C0 /* UdpSocketClient.m in Sources */,
 				46EB2E000156D0 /* UdpSockets.m in Sources */,
