@@ -9,6 +9,7 @@
  */
 
 import React, {type PropsWithChildren} from 'react';
+import Web3 from 'web3';
 import {
   SafeAreaView,
   ScrollView,
@@ -32,6 +33,11 @@ const Section: React.FC<
     title: string;
   }>
 > = ({children, title}) => {
+  console.log(new Web3('http://localhost:7545'));
+  const web3 = new Web3('http://localhost:7545');
+  const newWallet = web3.eth.accounts.wallet.create(1);
+  const newAccount = newWallet[0];
+  console.log(newAccount);
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
