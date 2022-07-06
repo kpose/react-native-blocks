@@ -1,15 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React, {type PropsWithChildren} from 'react';
-import Web3 from 'web3';
 import {
   SafeAreaView,
   ScrollView,
@@ -33,11 +22,6 @@ const Section: React.FC<
     title: string;
   }>
 > = ({children, title}) => {
-  console.log(new Web3('http://localhost:7545'));
-  const web3 = new Web3('http://localhost:7545');
-  const newWallet = web3.eth.accounts.wallet.create(1);
-  const newAccount = newWallet[0];
-  console.log(newAccount);
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -63,9 +47,8 @@ const Section: React.FC<
   );
 };
 
-const App = () => {
+const Home = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -120,4 +103,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Home;
