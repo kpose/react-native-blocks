@@ -11,6 +11,7 @@
     "postinstall": "./node_modules/.bin/rn-nodeify --install 'crypto,buffer,react-native-randombytes,vm,stream,http,https,os,url,net,fs' --hack"
   },
   "dependencies": {
+    "@ethersproject/shims": "^5.6.0",
     "@react-native-async-storage/async-storage": "^1.17.7",
     "@tradle/react-native-http": "^2.0.1",
     "@walletconnect/react-native-dapp": "^1.7.8",
@@ -22,6 +23,7 @@
     "constants-browserify": "^1.0.0",
     "dns.js": "^1.0.1",
     "domain-browser": "^1.2.0",
+    "ethers": "^5.6.9",
     "events": "^1.1.1",
     "https-browserify": "^0.0.1",
     "node-libs-browser": "^2.2.1",
@@ -32,6 +34,7 @@
     "react": "18.0.0",
     "react-native": "0.69.1",
     "react-native-crypto": "^2.2.0",
+    "react-native-get-random-values": "^1.8.0",
     "react-native-level-fs": "^3.0.1",
     "react-native-os": "^1.2.6",
     "react-native-randombytes": "^3.6.1",

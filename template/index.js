@@ -2,7 +2,7 @@
  * @format
  */
 /**
- * shim must be imported first to enable web3 work properly
+ * shim must be imported first to make web3 work properly
  * @format
  */
 import './shim';
