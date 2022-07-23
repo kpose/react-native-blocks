@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ethersproject/shims": "^5.6.0",
+    "@nomiclabs/hardhat-ethers": "^2.1.0",
     "@react-native-async-storage/async-storage": "^1.17.7",
     "@tradle/react-native-http": "^2.0.1",
     "@walletconnect/react-native-dapp": "^1.7.8",
@@ -19,6 +20,7 @@
     "base-64": "^1.0.0",
     "browserify-zlib": "^0.1.4",
     "buffer": "^4.9.2",
+    "chai": "^4.3.6",
     "console-browserify": "^1.2.0",
     "constants-browserify": "^1.0.0",
     "dns.js": "^1.0.1",
@@ -54,6 +56,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.2",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.3",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "@react-native-community/eslint-config": "^2.0.0",
     "@tsconfig/react-native": "^2.0.0",
     "@types/jest": "^26.0.23",
@@ -63,6 +68,7 @@
     "@typescript-eslint/parser": "^5.29.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.32.0",
+    "hardhat": "^2.10.1",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.70.3",
     "react-test-renderer": "18.0.0",
