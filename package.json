@@ -1,0 +1,8 @@
+{
+  "name": "react-native-blocks",
+  "version": "0.0.1",
+  "description": "An opinionated template to bootstrap your next React Native Dapp with architecture and boilerplate to let you focus on writing features right away.",
+  "repository": "https://github.com/kpose/react-native-blocks.git",
+  "author": "Jude Ganihu <ganihujude@gmail.com>",
+  "license": "MIT"
+}
