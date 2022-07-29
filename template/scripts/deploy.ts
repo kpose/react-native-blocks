@@ -1,18 +1,14 @@
-import { ethers } from "hardhat";
+import {ethers} from 'hardhat';
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-  const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
+  const greeting = 'Hello, hope you enjoy using react-native-blocks';
 
-  const lockedAmount = ethers.utils.parseEther("1");
+  const Greeter = await ethers.getContractFactory('Greeter');
+  const greeter = await Greeter.deploy(greeting);
 
-  const Lock = await ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+  await greeter.deployed();
 
-  await lock.deployed();
-
-  console.log("Lock with 1 ETH deployed to:", lock.address);
+  console.log('Greeter contract has been deployed to:', greeter.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
