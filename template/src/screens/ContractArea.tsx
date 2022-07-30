@@ -42,7 +42,18 @@ const ContractArea = () => {
             onPress: () => {},
             style: 'cancel',
           },
-          {text: 'Connect', onPress: () => connector.connect()},
+          {
+            text: 'Connect',
+            onPress: () =>
+              connector
+                .connect()
+                .then(x => {
+                  console.log(x);
+                })
+                .catch(x => {
+                  console.log(x);
+                }),
+          },
         ],
       );
     }
@@ -52,6 +63,9 @@ const ContractArea = () => {
   /* fetch Greeter contract greeting */
   const onGetPress = useCallback(async () => {
     checkConnectivity();
+    if (!connector || !connector.connected) {
+      return;
+    }
     try {
       setIsFecthing(true);
       const greeting = await contract.getGreeting();
@@ -61,11 +75,14 @@ const ContractArea = () => {
       setIsFecthing(false);
       console.log('Error: ', err);
     }
-  }, [checkConnectivity, contract]);
+  }, [checkConnectivity, connector, contract]);
 
   /* fetch Greeter contract greeting */
   const onSetGreeting = useCallback(async () => {
     checkConnectivity();
+    if (!connector || !connector.connected) {
+      return;
+    }
     try {
       setIsSetting(true);
       await contract.setGreeting(newGreeting);
@@ -76,7 +93,7 @@ const ContractArea = () => {
       setIsSetting(false);
       console.log('Error: ', err);
     }
-  }, [checkConnectivity, contract, newGreeting]);
+  }, [checkConnectivity, connector, contract, newGreeting]);
 
   const isDisabled = useCallback(() => {
     if (!newGreeting || isSetting) {
