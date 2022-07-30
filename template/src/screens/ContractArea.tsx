@@ -35,7 +35,7 @@ const ContractArea = () => {
     if (!connector || !connector.connected) {
       return Alert.alert(
         'Attention',
-        'You will need to connect your wallet, the sample contract was deployed to the ropsten testnet so no real token would be used.',
+        "You will need to connect your wallet, the sample contract was deployed to the ropsten testnet so don't use any real token.",
         [
           {
             text: 'Ignore',

@@ -374,8 +374,6 @@ PODS:
   - RNSVG (9.6.4):
     - React
   - SocketRocket (0.6.0)
-  - TcpSockets (4.0.0):
-    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -445,7 +443,6 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
-  - TcpSockets (from `../node_modules/react-native-tcp`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -547,8 +544,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSVG:
     :path: "../node_modules/react-native-svg"
-  TcpSockets:
-    :path: "../node_modules/react-native-tcp"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -607,7 +602,6 @@ SPEC CHECKSUMS:
   RNScreens: 4a1af06327774490d97342c00aee0c2bafb497b7
   RNSVG: a53a5de0d90ec96a6502cc3a4534dfcc0c130622
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  TcpSockets: 4ef55305239923b343ed0a378b1fac188b1373b0
   Yoga: 44c64131616253fa83366295acdbce3d14926041
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
