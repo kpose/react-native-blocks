@@ -95,7 +95,7 @@ const ContractArea = () => {
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        Interact with smart contracts
+        Interact with smart contract
       </Text>
       <Text
         style={[
