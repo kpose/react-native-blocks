@@ -33,9 +33,9 @@ const ContractArea = () => {
   /* check if metamask is connected */
   const checkConnectivity = useCallback(() => {
     if (!connector || !connector.connected) {
-      Alert.alert(
+      return Alert.alert(
         'Attention',
-        'You need to connect your metamask account first',
+        'You will need to connect your wallet, the sample contract was deployed to the ropsten testnet so no real token would be used.',
         [
           {
             text: 'Ignore',
@@ -45,9 +45,8 @@ const ContractArea = () => {
           {text: 'Connect', onPress: () => connector.connect()},
         ],
       );
-      return;
     }
-    connector.connect();
+    return connector.connect();
   }, [connector]);
 
   /* fetch Greeter contract greeting */
