@@ -3,7 +3,7 @@
 <p align="center" >
   <img
     height="480px"
-    src="screenshot.png"
+    src="/images/app.png"
     alt="Template landing screen preview"
   />
 </p>
@@ -56,17 +56,82 @@ $ npx react-native init MyApp --template https://github.com/kpose/react-native-b
 
 | React Native | Template |
 | ------------ | -------- |
-| 0.69.1       | 1.0.0    |
+| 0.69.3       | 1.0.0    |
 
 ## Required Steps
 
 #### specify a deep link URI scheme
 
-We have employed [WalletConnect](https://docs.walletconnect.com/) to easily help connect your React Native dapps to Ethereum Wallets on Android, iOS and the Web. The library is implemented using the React Context API, which is used to help make an instance of a connector accessible globally throughout your application.
+We have provisioned [WalletConnect](https://docs.walletconnect.com/) to easily help connect your React Native dapps to Ethereum Wallets on Android, iOS and the Web. The library is implemented using the React Context API, which is used to help make an instance of a connector accessible globally throughout your application.
 
-To help control navigation between external wallets and your application. On the web, you only need to specify a valid application route; whereas on mobile platforms, you must [specify a deep link URI scheme](https://reactnavigation.org/docs/deep-linking/)
+To help control navigation between external wallets and your application. On the web, you only need to specify a valid application route; whereas on mobile platforms, you must [specify a deep link URI scheme](https://reactnavigation.org/docs/deep-linking/#set-up-with-bare-react-native-projects).
+
+The easiest way to do this is with the uri-scheme package by running the following:
+
+```bash
+$ npx uri-scheme add <yoururlscheme> --android
+$ npx uri-scheme add <yoururlscheme> --ios
+```
+
+**Manually configuring scheme for iOS**
+To manually set up the scheme for iOS devices, open the `ios/your-project-name/AppDelegate.m` file and add the following code snippet:
+
+```javascript
+$ cd src/ios/projectName/AppDelegate.m
+
+...
+// Add the header at the top of the file:
+#import <React/RCTLinkingManager.h>
+
+// Add this above `@end`:
+- (BOOL)application:(UIApplication *)application
+   openURL:(NSURL *)url
+   options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  return [RCTLinkingManager application:application openURL:url options:options];
+}
+```
+
+Next, add the URI scheme to the iOS project configuration. Open, `Your-app-name/ios/app-name.xcworkspace` in Xcode. Then, select the project name in the left sidebar and navigate to the Info tab. Next, go to the URL Types, click the + (plus) button, in the new URL type, set the identifier and the URL scheme to your desired URL scheme.
+
+<p align="center" >
+  <img
+    height="480px"
+    src="/images/xcode.png"
+    alt="configure deep linking preview"
+  />
+</p>
+
+<br/>
+
+**Manually configuring scheme for Android**
+To manually set up a scheme for Android devices, you can create a new intent in the manifest. Open `/android/app/src/main/AndroidManifest.xml` and make the following adjustments:
+
+```javascript
+<!-- Set the launchMode to singleTask in <activity> -->
+<activity
+  android:name=".MainActivity"
+  android:label="@string/app_name"
+  android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+  android:launchMode="singleTask"
+  android:windowSoftInputMode="adjustResize">
+  <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+  </intent-filter>
+  <!-- Add this new intent-filter tag -->
+  <!-- Make sure to set the value of android:scheme to your own scheme -->
+  <intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme= "your own scheme " />
+  </intent-filter>
+</activity>
+```
 
 **Then, modify your app navigator linking**
+To allow React Navigation library to handle deep links through its routing logic, you need to define a configuration object.
 
 ```javascript
 $ cd src/navigation/
