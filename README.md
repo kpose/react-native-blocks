@@ -74,6 +74,7 @@ $ npx uri-scheme add <yoururlscheme> --ios
 ```
 
 **Manually configuring scheme for iOS**
+
 To manually set up the scheme for iOS devices, open the `ios/your-project-name/AppDelegate.m` file and add the following code snippet:
 
 ```javascript
@@ -105,6 +106,7 @@ Next, add the URI scheme to the iOS project configuration. Open, `Your-app-name/
 <br/>
 
 **Manually configuring scheme for Android**
+
 To manually set up a scheme for Android devices, you can create a new intent in the manifest. Open `/android/app/src/main/AndroidManifest.xml` and make the following adjustments:
 
 ```javascript
