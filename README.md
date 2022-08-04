@@ -227,11 +227,11 @@ root
 ├── contracts
 ├── ios
 ├── scripts
-└── src
+├── src
     └── hooks
     └── navigation
     └── screens
-├── test
+└──test
 ```
 
 ## Quick Overview
@@ -243,15 +243,14 @@ Quickly get an idea about each folder's role.
 | \_\_tests\_\_ | (Default; as per official template)                                                                                      |
 | android       | Android project. Includes modifications to integrate libraries.                                                          |
 | artifacts     | The directory where the compilation artifacts are stored.This is where you will find the successfully compiled contracts |
-| cache         | The directory used by Hardhat to cache its internal stuff.                                                               |
-| contracts     | This is where the source files for your contracts should be.                                                             |
+| contracts     | This is where the source files for your solidity smart contracts should be.                                              |
 | ios           | iOS project. Includes modifications to integrate libraries.                                                              |
-| scripts       | Folder for your hardhat simple automation scripts go.                                                                    |
+| scripts       | Folder for your hardhat simple automation scripts                                                                        |
 | src           | Most of the app's code is here.                                                                                          |
 | test          | This directory where your smart contract solidity tests are located.                                                     |
 | hooks         | Shared hooks.                                                                                                            |
-| navigation    | Navigation service (navigate from outside React components).                                                             |
-| screens       | Shared custom exceptions.                                                                                                |
+| navigation    | Navigation service                                                                                                       |
+| screens       | Presentation screens                                                                                                     |
 
 ## Credits
 
