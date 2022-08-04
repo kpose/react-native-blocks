@@ -183,7 +183,7 @@ As a guide, we have included an example smart contract. This contract have alred
 
 ## Libraries
 
-Let's briefly go over the benefit of each library included in this template.
+Let's briefly go over the benefit of some libraries included in this template.
 
 ### TypeScript
 
@@ -224,7 +224,6 @@ root
 ├── __bundle
 ├── android
 ├── artifacts
-├── cache
 ├── contracts
 ├── ios
 ├── scripts
