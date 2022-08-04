@@ -204,15 +204,15 @@ Similar to ethers.js, web3.js is a collection of libraries that also allow you t
 
 ### WalletConnect
 
-Also, we will need a way to handle account management and connecting the current user to the blockchain.WalletConnect is an open protocol to communicate securely between Wallets and Dapps (Web3 Apps). The protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads.
+Also, we will need a way to handle account management and connecting the current user to the blockchain. WalletConnect is an open protocol to communicate securely between Wallets and Dapps (Web3 Apps). The protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads. [See v1.0 docs for implementation and modification.](https://docs.walletconnect.com/quick-start/dapps/react-native)
 
 ### react-native-svg
 
-Prefer using SVG over images all the time (remember to optimize your SVGs).
+Instead of using .png or .jpeg files in your React Native app, you should be using the SVG format. SVG is a vector-based format that can scale infinitely without compromising quality. Also, you won't end up bloating your app with higher image file sizes, which most times increase your app bundle size. [See documentation.](https://github.com/react-native-svg/react-native-svg)
 
 ### React Navigation
 
-It is the most popular navigation library. For most apps, this is the best choice.
+It is the most popular navigation library. For most apps, this is the best choice. [See documentation.](https://reactnavigation.org/docs/getting-started/)
 
 > _If you appreciate these libraries and find them useful, please consider supporting them._
 
