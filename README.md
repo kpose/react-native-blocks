@@ -18,11 +18,11 @@ Preconfigured with
 
 - TypeScript
 - [HardHat:](https://hardhat.org/)Ethereum development environment.
-- [React Navigation:](https://reactnavigation.org/) (**v6**) for navigation and deeplinking.
-- [AsyncStorage:](https://github.com/react-native-community/async-storage) An asynchronous, unencrypted, persistent, key-value storage system for React Native.
 - [web3.js:](https://web3js.readthedocs.io/en/v1.7.4/#) A collection of libraries that allow you to interact with a local or remote ethereum node.
 - [Ethers:](https://docs.ethers.io/v5/) Interact with the Ethereum Blockchain and its ecosystem.
 - [WalletConnect:](https://docs.walletconnect.com/) Communicate securely between Wallets and Dapps.
+- [React Navigation:](https://reactnavigation.org/) (**v6**) for navigation and deeplinking.
+- [AsyncStorage:](https://github.com/react-native-community/async-storage) An asynchronous, unencrypted, persistent, key-value storage system for React Native.
 - [react-native-svg:](https://github.com/react-native-community/react-native-svg) Provide SVG support.
 - [react-native-gesture-handler:](https://docs.swmansion.com/react-native-gesture-handler/docs/) Recognizing pinch, rotation, pan and few other gestures.
 

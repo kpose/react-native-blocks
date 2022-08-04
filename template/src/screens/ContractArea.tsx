@@ -30,7 +30,7 @@ const ContractArea = () => {
     contractAbi: CONTRACT_ABI,
   });
 
-  /* check if metamask is connected */
+  /* check if wallet is connected */
   const checkConnectivity = useCallback(() => {
     if (!connector || !connector.connected) {
       return Alert.alert(
@@ -40,7 +40,6 @@ const ContractArea = () => {
           {
             text: 'Ignore',
             onPress: () => {},
-            style: 'cancel',
           },
           {
             text: 'Connect',
@@ -57,7 +56,7 @@ const ContractArea = () => {
         ],
       );
     }
-    return connector.connect();
+    return;
   }, [connector]);
 
   /* fetch Greeter contract greeting */
@@ -77,7 +76,7 @@ const ContractArea = () => {
     }
   }, [checkConnectivity, connector, contract]);
 
-  /* fetch Greeter contract greeting */
+  /* upddate Greeter contract greeting */
   const onSetGreeting = useCallback(async () => {
     checkConnectivity();
     if (!connector || !connector.connected) {
