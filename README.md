@@ -190,9 +190,13 @@ Let's briefly go over the benefit of some libraries included in this template.
 For type safety
 But in all seriousness, if you are considering this template I assume you are a TypeScript fan.
 
-### HardHat
+### Hardhat
 
-Hardhat is a development environment for writing smart contracts on the Ethereum blockchain. To manage many of the tasks that are inherent to developing dApps and smart contracts, hardhat provides a way to test, compile, deploy and debug dApps based on the Ethereum blockchain. [See docs for implementation and modification.](https://hardhat.org/docs)
+Hardhat is a development environment for writing smart contracts on the Ethereum blockchain. To manage many of the tasks that are inherent to developing dApps and smart contracts, hardhat provides a way to test, compile, deploy and debug dApps based on the Ethereum blockchain.
+
+- **Hardhat Toolbox:** The hardhat-toolbox plugin bundles all the commonly used packages and Hardhat plugins that are recommend to start developing with Hardhat. [Read more info and advantages](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox#hardhat-toolbox).
+
+[See Hardhat docs for implementation and modification.](https://hardhat.org/docs)
 
 ### Ethers
 
