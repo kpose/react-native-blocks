@@ -46,7 +46,7 @@ Create a new project using the template.
 
 - **Note:** the command will fail if you have the global legacy react-native-cli installed. Make sure you uninstall it first. More info at [react-native-community/cli](https://github.com/react-native-community/cli#about).
 
-### RN 0.69.1
+### RN 0.69.3
 
 ```bash
 $ npx react-native init MyApp --template https://github.com/kpose/react-native-blocks
@@ -62,9 +62,9 @@ $ npx react-native init MyApp --template https://github.com/kpose/react-native-b
 
 #### specify a deep link URI scheme
 
-We have provisioned [WalletConnect](https://docs.walletconnect.com/) to easily help connect your React Native dapps to Ethereum Wallets on Android, iOS and the Web. The library is implemented using the React Context API, which is used to help make an instance of a connector accessible globally throughout your application.
+We have provisioned [WalletConnect](https://docs.walletconnect.com/) to easily help connect your React Native dapps to Ethereum Wallets on Android, iOS and the Web. This library is implemented using the React Context API, which is used to help make an instance of a connector accessible globally throughout your application.
 
-To help control navigation between external wallets and your application. On the web, you only need to specify a valid application route; whereas on mobile platforms, you must [specify a deep link URI scheme](https://reactnavigation.org/docs/deep-linking/#set-up-with-bare-react-native-projects).
+To help control navigation between external wallets and your application, on the web, you only need to specify a valid application route; whereas on mobile platforms, you must [specify a deep link URI scheme](https://reactnavigation.org/docs/deep-linking/#set-up-with-bare-react-native-projects).
 
 The easiest way to do this is with the uri-scheme package by running the following:
 
@@ -73,7 +73,7 @@ $ npx uri-scheme add <yoururlscheme> --android
 $ npx uri-scheme add <yoururlscheme> --ios
 ```
 
-**Manually configuring scheme for iOS**
+**Manually configure scheme for iOS**
 
 To manually set up the scheme for iOS devices, open the `ios/your-project-name/AppDelegate.m` file and add the following code snippet:
 
@@ -105,7 +105,7 @@ Next, add the URI scheme to the iOS project configuration. Open, `Your-app-name/
 
 <br/>
 
-**Manually configuring scheme for Android**
+**Manually configure scheme for Android**
 
 To manually set up a scheme for Android devices, you can create a new intent in the manifest. Open `/android/app/src/main/AndroidManifest.xml` and make the following adjustments:
 
@@ -179,7 +179,7 @@ const App = () => {
 
 ## Example
 
-As a guide, we have included an example smart contract, this contract have alreday been deployed on the blockchain. Our example will read and write data on the blockchain.
+As a guide, we have included an example smart contract. This contract have alreday been deployed on the ropsten testnet so no real token would be used. Our example will read and write data on the blockchain.
 
 ## Libraries
 
@@ -188,24 +188,23 @@ Let's briefly go over the benefit of each library included in this template.
 ### TypeScript
 
 For type safety
-
 But in all seriousness, if you are considering this template I assume you are a TypeScript fan.
 
 ### HardHat
 
-To manage many of the tasks that are inherent to developing dApps and smart contracts, we provided a way to test, compile, deploy and debug dApps based on the Ethereum blockchain.
+Hardhat is a development environment for writing smart contracts on the Ethereum blockchain. To manage many of the tasks that are inherent to developing dApps and smart contracts, hardhat provides a way to test, compile, deploy and debug dApps based on the Ethereum blockchain. [See docs for implementation and modification.](https://hardhat.org/docs)
 
 ### Ethers
 
-The ethers.js library aims to be a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.
+We will need a way to interact with the smart contracts that have been deployed. We will need a way to read for data as well as send new transactions. Ethers.js is a web 3.0 library that can be used for interacting with smart contracts on the Ethereum blockchain and other Ethereum Virtual Machine (EVM) compatible blockchains. [See ethers v5 documentation.](https://docs.ethers.io/v5/)
 
 ### web3.js
 
-web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+Similar to ethers.js, web3.js is a collection of libraries that also allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket. [See web3.js documentation.](https://web3js.readthedocs.io/)
 
 ### WalletConnect
 
-WalletConnect is the decentralized Web3 messaging layer and a standard to connect blockchain wallets to our dapps.
+Also, we will need a way to handle account management and connecting the current user to the blockchain.WalletConnect is an open protocol to communicate securely between Wallets and Dapps (Web3 Apps). The protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads.
 
 ### react-native-svg
 
