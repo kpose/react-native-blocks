@@ -16,7 +16,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import ContractArea from './ContractArea';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -70,10 +69,6 @@ const Home = () => {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-
-          {/* render contract interaction area */}
-          <ContractArea />
-
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
