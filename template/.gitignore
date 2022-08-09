@@ -71,11 +71,6 @@ typechain-types
 
 
 #Hardhat files
-#
-# It is recommended to ignore your cache and artifacts folders, they have only
-# been made avaliable for the sake of our already compiled and deployed example smart contract
-# https://hardhat.org/hardhat-runner/docs/config#path-configuration
-
 cache/
-#artifacts
+artifacts
 
