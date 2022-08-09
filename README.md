@@ -227,12 +227,10 @@ root
 ├── __tests__
 ├── __bundle
 ├── android
-├── artifacts
 ├── contracts
 ├── ios
 ├── scripts
 ├── src
-    └── hooks
     └── navigation
     └── screens
 └──test
